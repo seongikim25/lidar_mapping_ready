@@ -1,0 +1,18 @@
+knife:
+  dangerous: true
+  fragile: false
+
+glass:
+  dangerous: false
+  fragile: true
+
+apple:
+  dangerous: false
+  fragile: false
+
+egg:
+  dangerous: false
+  fragile: true
+
+
+

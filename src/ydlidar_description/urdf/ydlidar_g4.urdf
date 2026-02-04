@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<robot name="ydlidar_robot">
+
+    <!-- Base_Link -->
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <box size="0.1 0.1 0.05"/>
+            </geometry>
+            <material name="blue">
+                <color rgba="0 0 0.8 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <!-- Laser_Link -->
+    <link name="laser_frame">
+        <visual>
+            <geometry>
+                <cylinder length="0.04" radius="0.035"/>
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <!-- Joint: base_link to laser_frame -->
+    <joint name="laser_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="laser_frame"/>
+        <origin xyz="0 0 0.025" rpy="0 0 0"/>
+    </joint>
+
+</robot>
